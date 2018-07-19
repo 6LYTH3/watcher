@@ -70,11 +70,12 @@ type Event struct {
 // file name associated with the event.
 func (e Event) String() string {
 	if e.FileInfo != nil {
-		pathType := "FILE"
-		if e.IsDir() {
-			pathType = "DIRECTORY"
-		}
-		return fmt.Sprintf("%s %q %s [%s]", pathType, e.Name(), e.Op, e.Path)
+		//pathType := "FILE"
+		//if e.IsDir() {
+		//	pathType = "DIRECTORY"
+		//}
+		//return fmt.Sprintf("%s %q %s [%s]", pathType, e.Name(), e.Op, e.Path)
+		return e.Path
 	}
 	return "???"
 }
